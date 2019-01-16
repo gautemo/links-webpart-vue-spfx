@@ -4,7 +4,6 @@ import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
-import { escape } from '@microsoft/sp-lodash-subset';
 
 import * as strings from 'LinksWebpartVueSpfxWebPartStrings';
 
@@ -15,6 +14,7 @@ import LinksWebpartVueSpfxComponent from './components/LinksWebpartVueSpfx.vue';
 
 export interface ILinksWebpartVueSpfxWebPartProps {
   description: string;
+  list: string;
 }
 
 export default class LinksWebpartVueSpfxWebPart extends BaseClientSideWebPart<ILinksWebpartVueSpfxWebPartProps> {
@@ -23,11 +23,12 @@ export default class LinksWebpartVueSpfxWebPart extends BaseClientSideWebPart<IL
     const id: string = `wp-${this.instanceId}`;
     this.domElement.innerHTML = `<div id="${id}"></div>`;
 
-    let el = new Vue({
+    const el = new Vue({
       el: `#${id}`,
       render: h => h(LinksWebpartVueSpfxComponent, {
         props: {
-          description: this.properties.description
+          description: this.properties.description,
+          list: this.properties.list
         }
       })
     });
@@ -50,6 +51,9 @@ export default class LinksWebpartVueSpfxWebPart extends BaseClientSideWebPart<IL
               groupFields: [
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
+                }),
+                PropertyPaneTextField('list', {
+                  label: strings.PropertyPaneList
                 })
               ]
             }

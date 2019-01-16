@@ -1,4 +1,3 @@
-[object Object]
 
 'use strict';
 const path = require('path');
@@ -56,7 +55,7 @@ const themedStyleLoader = require.resolve('@microsoft/loader-load-themed-styles'
             }];
 
             generatedConfiguration.plugins.push(vuePlugin);
-        
+
                 generatedConfiguration.module.rules.push(...loadersConfigs);
 
             return generatedConfiguration;
