@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "links-webpart-vue-spfx-client-side-solution",
+    "id": "13f98568-8e08-4326-8982-94a50b3fd912",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/links-webpart-vue-spfx.sppkg"
+  }
+}

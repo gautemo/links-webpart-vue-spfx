@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "links-webpart-vue-spfx-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/linksWebpartVueSpfx/LinksWebpartVueSpfxWebPart.js",
+          "manifest": "./src/webparts/linksWebpartVueSpfx/LinksWebpartVueSpfxWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "vue": "./node_modules/vue/dist/vue.min.js"
+  },
+  "localizedResources": {
+    "LinksWebpartVueSpfxWebPartStrings": "lib/webparts/linksWebpartVueSpfx/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "@pnp/generator-spfx": {
+    "framework": "none",
+    "pnpFramework": "vuejs",
+    "pnp-libraries": [],
+    "pnp-vetting": []
+  },
+  "@microsoft/generator-sharepoint": {
+    "framework": "none",
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.7.1",
+    "libraryName": "links-webpart-vue-spfx",
+    "libraryId": "13f98568-8e08-4326-8982-94a50b3fd912",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}
