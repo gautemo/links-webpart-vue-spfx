@@ -28,7 +28,8 @@ export default class LinksWebpartVueSpfxWebPart extends BaseClientSideWebPart<IL
       render: h => h(LinksWebpartVueSpfxComponent, {
         props: {
           description: this.properties.description,
-          list: this.properties.list
+          list: this.properties.list,
+          context: this.context,
         }
       })
     });
